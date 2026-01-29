@@ -12,7 +12,7 @@ import {
 const galleryImages = [
     { src: "/pic2.jpg", alt: "Advanced OT", caption: "Dr. Sumit Shanker" },
     { src: "/pic3.jpg", alt: "Pharmacy", caption: "Dr. Himadri Shankar" },
-    { src: "/op.jpg", alt: "CATH LAB", caption: "State-of-the-art CATH LAB" },
+    { src: "/op.JPG", alt: "CATH LAB", caption: "State-of-the-art CATH LAB" },
     { src: "/CT.jpg", alt: "CT Scan", caption: "Ultrasound Scanner" },
     { src: "/ICU.jpg", alt: "ICU", caption: "Dialysis Unit" },
     { src: "/PW.jpg", alt: "Ward", caption: "Specialized team" },
