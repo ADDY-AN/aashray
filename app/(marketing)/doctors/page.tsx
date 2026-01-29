@@ -15,7 +15,7 @@ const doctors = [
         details: "Gold Medalist | Fellow of Indian College of Physicians",
         experience: "30+ Years",
         image: "/dr-sharma.jpg",
-        availability: "Mon - Sat (By Appointment)",
+        availability: "Mon - Sun",
         imagePosition: "object-top",
     },
     {
@@ -26,7 +26,7 @@ const doctors = [
         details: "Gold Medalist | Ex. RN Tagore Hospital, Kolkata",
         experience: "12+ Years",
         image: "/pic3.jpg",
-        availability: "Mon - Sat (10:00 AM - 4:00 PM)",
+        availability: "Mon - Sun",
         imagePosition: "object-center",
     },
     {
@@ -37,7 +37,7 @@ const doctors = [
         details: "Head of Cardiology (JLNMCH) | Angioplasty Expert",
         experience: "10+ Years",
         image: "/pic2.jpg",
-        availability: "24/7 Emergency & OP",
+        availability: "Mon - Sun",
         imagePosition: "object-top",
     },
     {
@@ -48,7 +48,7 @@ const doctors = [
         details: "High-Risk Pregnancy | Advanced Fetal Ultrasound",
         experience: "8+ Years",
         image: "/dr-amrita.jpg",
-        availability: "Tue, Thu, Sat (11:00 AM - 2:00 PM)",
+        availability: "Mon - Sun",
         imagePosition: "object-top",
     },
     {
@@ -59,7 +59,7 @@ const doctors = [
         details: "Prosthodontics | Maxillofacial Prosthetics",
         experience: "8+ Years",
         image: "/dr-setu.jpg",
-        availability: "Mon - Sat (2:00 PM - 8:00 PM)",
+        availability: "Mon - Sun",
         imagePosition: "object-top",
     },
 ];

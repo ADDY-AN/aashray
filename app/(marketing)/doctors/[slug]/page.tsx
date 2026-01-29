@@ -19,7 +19,10 @@ const doctorsData = [
         experience: "30+ Years",
         image: "/dr-sharma.jpg", // ✅ Correct
         imagePosition: "object-top",
-        about: "Dr. Hemshanker Sharma is a veteran physician with exceptional credentials...",
+        about: "Dr. Hemshankar Sharma is a veteran physician with exceptional credentials in internal\n" +
+            "medicine and nephrology. As a Gold Medalist and Fellow of four prestigious medical\n" +
+            "colleges, Dr. Sharma represents the pinnacle of medical expertise and academic\n" +
+            "achievement.",
         expertise: [
             "Comprehensive Internal Medicine",
             "Kidney Disease Management (Nephrology)",
