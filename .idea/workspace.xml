@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a1155cea-a0f6-416f-b33e-3e46f4f88c0b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/(marketing)/about/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(marketing)/contact/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(marketing)/departments/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(marketing)/doctors/[slug]/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(marketing)/doctors/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(marketing)/facilities/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(marketing)/gallery/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(marketing)/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(marketing)/news/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api/contact/route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/department/departmentCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/department/departmentgrid.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/department/facilityList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/forms/appointmentDlg.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/forms/contactForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/layout/footer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/layout/mobiNav.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/layout/navbar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/marketing/gallery-section.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/providers/smooth-scroll.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ui/hero-scene.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ui/horizontal-scroll.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ui/sketchfab-model.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/constants/departments.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/constants/site-config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/utils.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="38v3K9w503hExkZBcCPeO2e6UOV" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "javascript.preferred.runtime.type.id": "node",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "/Users/adi/Desktop/project/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/api/contact" />
+      <recent name="$PROJECT_DIR$/app/(marketing)" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/app" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-WS-253.29346.242" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a1155cea-a0f6-416f-b33e-3e46f4f88c0b" name="Changes" comment="" />
+      <created>1769666150905</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1769666150905</updated>
+      <workItem from="1769666151901" duration="36733000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.prisma" />
+  </component>
+</project>

@@ -1,0 +1,102 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  /* --- CUSTOM BRAND COLORS --- */
+  --color-brand-dark: var(--brand-dark);     /* The Deep Background */
+  --color-brand-neon: var(--brand-neon);     /* The Bright Teal */
+  --color-brand-card: var(--brand-card);     /* Slightly lighter bg for cards */
+  --color-brand-gray: var(--brand-gray);     /* Muted text */
+
+  /* Map Shadcn variables */
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+}
+
+:root {
+  /* --- 1. THE PALETTE (Extracted from your screenshot) --- */
+  --brand-dark: #0f0f13;   /* Deep Charcoal/Black */
+  --brand-neon: #00d2ba;   /* Vibrant Neon Teal */
+  --brand-card: #18181e;   /* Slightly lighter for cards */
+  --brand-gray: #a1a1aa;   /* Light Gray text */
+
+  --radius: 0rem; /* Tech designs often use sharp corners (0rem) or small (0.5rem) */
+
+  /* --- 2. SHADCN MAPPING (Dark Mode by Default) --- */
+
+  /* Background is now the Deep Dark color */
+  --background: var(--brand-dark);
+  --foreground: #ffffff; /* White text looks best on this dark bg */
+
+  /* Cards (like the "20+ Years" box) */
+  --card: var(--brand-card);
+  --card-foreground: #ffffff;
+
+  --popover: var(--brand-card);
+  --popover-foreground: #ffffff;
+
+  /* Primary Action (Buttons): Neon Teal */
+  --primary: var(--brand-neon);
+  --primary-foreground: #0f0f13; /* Black text on the bright teal button */
+
+  /* Secondary Action: Dark Gray/White outline */
+  --secondary: #27272a;
+  --secondary-foreground: #ffffff;
+
+  /* Muted: For subtle text */
+  --muted: #27272a;
+  --muted-foreground: var(--brand-gray);
+
+  /* Accent: Hover states */
+  --accent: var(--brand-neon); /* Hovering turns things teal */
+  --accent-foreground: #0f0f13;
+
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+
+  /* Borders: Very subtle dark gray lines */
+  --border: #27272a;
+  --input: #27272a;
+  --ring: var(--brand-neon); /* Focus ring is Teal */
+}
+
+/* Optional: If you want a Light Mode version, define it here.
+   Otherwise, the site will stay dark. */
+.dark {
+  /* The default :root is already dark, so we don't strictly need this
+     unless you plan to have a toggle. */
+  --background: #0f0f13;
+  --foreground: #ffffff;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
