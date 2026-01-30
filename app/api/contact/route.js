@@ -32,7 +32,7 @@ export async function POST(request) {
         // 3. Email to ADMIN (You)
         const adminMail = {
             from: process.env.EMAIL_USER,
-            to: 'info@aashrayhospital.com', // REPLACE with your receiving email
+            to: 'adityakumar0408@gmail.com', // REPLACE with your receiving email
             subject: `New Appointment: ${name}`,
             html: `
                 <div style="font-family: Arial, sans-serif; color: #333;">

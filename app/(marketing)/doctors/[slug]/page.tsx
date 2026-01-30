@@ -40,7 +40,7 @@ const doctorsData = [
         qualification: "MBBS, MD, DNB (Nephrology) - Gold Medalist",
         designation: "Head of Nephrology (JLNMCH)",
         experience: "12+ Years",
-        image: "/pic3_1.jpg", // ✅ Ensure this file exists in /public
+        image: "/pro-5.jpg", // ✅ Ensure this file exists in /public
         imagePosition: "object-top",
         about: "Dr. Himadri Shankar is a distinguished nephrologist...",
         expertise: [
@@ -60,8 +60,8 @@ const doctorsData = [
         qualification: "MBBS, MD (Medicine), DM (Cardiology)",
         designation: "Head of Cardiology (JLNMCH)",
         experience: "10+ Years",
-        image: "/pic2_1.jpg", // ✅ Ensure this file exists in /public
-        imagePosition: "object-left",
+        image: "/pro-3.jpg", // ✅ Ensure this file exists in /public
+        imagePosition: "object-top",
         about: "Dr. Sumit Shanker is a highly skilled interventional cardiologist...",
         expertise: [
             "Coronary Angiography & Angioplasty",
