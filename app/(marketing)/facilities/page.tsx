@@ -13,42 +13,42 @@ const facilities = [
         description: "Our state-of-the-art Catheterization Lab is equipped for life-saving interventional cardiac procedures. We perform coronary angiography, angioplasty, and stent placements with precision technology to minimize recovery time.",
         features: ["Coronary Angiography", "Primary Angioplasty (PAMI)", "Pacemaker Implantation"],
         icon: HeartPulse,
-        image: "/facility-cathlab.jpg",
+        image: "/cath-lab.jpg",
     },
     {
         title: "Dialysis Unit",
         description: "A dedicated nephrology wing offering comprehensive renal care. Our modern dialysis unit provides safe and comfortable hemodialysis and peritoneal dialysis sessions for patients with chronic kidney disease.",
         features: ["24/7 Hemodialysis", "Peritoneal Dialysis", "CRRT Capabilities"],
         icon: Activity,
-        image: "/facility-dialysis.jpg",
+        image: "/ICU.jpg",
     },
     {
         title: "Fetal Medicine Centre",
         description: "Specialized prenatal care utilizing high-resolution ultrasound technology. We provide early diagnosis of fetal abnormalities, genetic counseling, and management of high-risk pregnancies to ensure the safety of mother and child.",
         features: ["Level III Ultrasound", "Genetic Counseling", "Fetal Doppler"],
         icon: Baby,
-        image: "/facility-fetal.jpg",
+        image: "/fetal.jpg",
     },
     {
         title: "Dental & Implant Studio",
         description: "A futuristic dental center focusing on maxillofacial prosthetics and oral implantology. We restore smiles using advanced implants and cosmetic procedures, supported by an in-house digital workflow.",
         features: ["Dental Implants", "Smile Design", "Maxillofacial Prosthetics"],
         icon: Sparkles,
-        image: "/facility-dental.jpg",
+        image: "/dental.jpg",
     },
     {
         title: "Modular Operation Theatre",
         description: "Our OT complex is designed with laminar airflow and HEPA filters to maintain absolute sterility. It is fully equipped for complex general surgeries, trauma cases, and specialized cardiac interventions.",
         features: ["Infection Control System", "Advanced Anesthesia Workstation", "C-Arm Imaging"],
         icon: Stethoscope,
-        image: "/facility-ot.jpg",
+        image: "/ope.jpg",
     },
     {
         title: "24/7 Critical Care (ICU)",
         description: "Our Intensive Care Unit is staffed round-the-clock by critical care specialists. We handle complex medical emergencies, cardiac arrests, and post-operative recovery with advanced monitoring systems.",
         features: ["Ventilator Support", "Multipara Monitors", "Central Oxygen Supply"],
         icon: Clock,
-        image: "/facility-icu.jpg",
+        image: "/ICU-2.jpg",
     }
 ];
 
