@@ -13,7 +13,6 @@ const galleryImages = [
     { src: "/gallery-1.jpg", alt: "Advanced OT", caption: "Aashray" },
     { src: "/pic1.jpg", alt: "ICU Unit", caption: "ICU Unit" },
     { src: "/ICU.jpg", alt: "ICU", caption: "Dialysis Unit" },
-    { src: "/op.JPG", alt: "CATH LAB", caption: "State-of-the-art CATH LAB" },
     { src: "/gallery-2.jpg", alt: "Pharmacy", caption: "Dental Care" },
     { src: "/CT.jpg", alt: "CT Scan", caption: "Ultrasound Scanner" },
 

@@ -42,7 +42,7 @@ const doctorsData = [
         image: "/pro-5.jpg",
         imagePosition: "object-top",
         phone: "6207833133",
-        about: "Dr. Himadri Shankar is a leading Nephrologist and Renal Transplant Physician, bringing Gold Medalist expertise to kidney care in Bihar. He specializes in the comprehensive management of Chronic Kidney Disease (CKD), resistant hypertension, and electrolyte imbalances. His proficiency extends to critical renal replacement therapies, including Hemodialysis and Peritoneal Dialysis. Only Center in Bhagalpur with HDF (Hemodiafiltration) machine. First Center to do Plasmapheresis in Bhagalpur. More than 50000 Hemodialysis done till date over 4 years.",
+        about: "Dr. Himadri Shankar is a leading Nephrologist and Renal Transplant Physician, bringing Gold Medalist expertise to kidney care in Bihar. He specializes in the comprehensive management of Chronic Kidney Disease (CKD), resistant hypertension, and electrolyte imbalances. His proficiency extends to critical renal replacement therapies, including Hemodialysis and Peritoneal Dialysis.\n\nKey Achievements:\n• First Center to do Plasmapheresis in Bhagalpur.\n• Only Center in Bhagalpur with HDF (Hemodiafiltration) machine.\n• More than 50,000 Hemodialysis done till date over 4 years.",
         expertise: [
             "Chronic Kidney Disease (CKD)",
             "Hemodialysis & Peritoneal Dialysis",

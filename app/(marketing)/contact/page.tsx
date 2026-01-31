@@ -222,8 +222,8 @@ export default function ContactPage() {
                                         <option value="Dr. Hem Shanker Sharma">Dr. Hem Shanker Sharma (Internal Medicine)</option>
                                         <option value="Dr. Himadri Shankar">Dr. Himadri Shankar (Nephrology)</option>
                                         <option value="Dr. Sumit Shanker">Dr. Sumit Shanker (Cardiology)</option>
-                                        <option value="Dr. Setu Chhabra">Dr. Setu Chhabra (Fetal Medicine)</option>
                                         <option value="Dr. Amrita Pritam">Dr. Amrita Pritam (Cosmetology)</option>
+                                        <option value="Dr. Setu Chhabra">Dr. Setu Chhabra (Fetal Medicine)</option>
                                     </select>
                                     <div className="absolute right-3 top-3.5 pointer-events-none opacity-50">
                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6"/></svg>
