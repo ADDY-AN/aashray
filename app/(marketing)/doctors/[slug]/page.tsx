@@ -30,7 +30,7 @@ const doctorsData = [
             "Infectious Disease Management",
             "Preventive Healthcare Strategies"
         ],
-        availability: "Mon - Sat",
+        availability: "Mon - Sun",
     },
     {
         id: "dr-himadri-shankar",
@@ -51,7 +51,7 @@ const doctorsData = [
             "Glomerular Diseases",
             "Diabetic Nephropathy"
         ],
-        availability: "Mon - Sat",
+        availability: "Mon - Sun",
     },
     {
         id: "dr-sumit-shanker",
@@ -93,7 +93,7 @@ const doctorsData = [
             "Fetal Growth Monitoring",
             "Maternal-Fetal Medicine"
         ],
-        availability: "Mon - Sat",
+        availability: "Mon - Sun",
     },
     {
         id: "dr-amrita-pritam",
@@ -114,7 +114,7 @@ const doctorsData = [
             "Full Mouth Rehabilitation",
             "Root Canal Treatment"
         ],
-        availability: "Mon - Sat",
+        availability: "Mon - Sun",
     },
 ];
 

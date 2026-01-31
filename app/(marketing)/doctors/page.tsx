@@ -40,7 +40,7 @@ const doctors = [
         name: "Dr. Sumit Shanker",
         specialty: "Interventional Cardiologist",
         qualification: "MBBS, MD, DM (Cardiology)",
-        details: "Head of Cardiology (JLNMCH) | Angioplasty Expert",
+        details: "Head of Cardiology (JLNMCH) | Interventional Cardiologist ",
         experience: "12+ Years",
         image: "/pro-3.jpg",
         availability: "Mon - Sun",
