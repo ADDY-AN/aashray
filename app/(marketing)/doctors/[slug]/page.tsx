@@ -222,13 +222,14 @@ export default async function DoctorProfilePage({ params }: { params: Promise<{ 
                 </div>
             </section>
 
-            {/* --- CTA SECTION --- */}
+            {/* --- CTA SECTION (UPDATED COLOR) --- */}
             <section className="py-20 px-6 border-t border-[#028090]/30 bg-[#05668d] text-center mt-12">
                 <h2 className="text-3xl font-extrabold uppercase tracking-tight mb-6 text-white">
                     Need Expert Medical Advice?
                 </h2>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button size="lg" className="rounded-full bg-[#02c39a] text-white hover:bg-[#00a896] font-bold uppercase px-10 h-14 shadow-lg">
+                    {/* ✅ FIXED: Changed bg-[#02c39a] to bg-[#00a896] (Teal) */}
+                    <Button size="lg" className="rounded-full bg-[#00a896] text-white hover:bg-[#028090] font-bold uppercase px-10 h-14 shadow-lg transition-all hover:scale-105">
                         <Phone className="mr-2 h-4 w-4" /> Call +91 77391 42568
                     </Button>
                     <Link href="/contact">
