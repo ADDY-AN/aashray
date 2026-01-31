@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/carousel";
 
 const galleryImages = [
-    { src: "/gallery-1.jpg", alt: "Advanced OT", caption: "Aashray" },
+    { src: "/DSC00325 copy.jpg", alt: "Advanced OT", caption: "Aashray" },
     { src: "/pic1.jpg", alt: "ICU Unit", caption: "ICU Unit" },
     { src: "/ICU.jpg", alt: "ICU", caption: "Dialysis Unit" },
     { src: "/gallery-2.jpg", alt: "Pharmacy", caption: "Dental Care" },
