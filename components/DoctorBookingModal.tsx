@@ -196,7 +196,7 @@ export default function DoctorBookingModal({ doctorName, doctorPhone, isCompact 
                     font-bold uppercase tracking-wider transition-all shadow-md hover:shadow-xl !border-none
                     ${isCompact
                     ? "!bg-[#00a896] hover:!bg-[#028090] !text-white h-10 px-6 text-xs rounded-lg w-auto"
-                    : "!bg-[#25D366] hover:!bg-[#128C7E] !text-white w-full h-14 text-sm rounded-full"
+                    : "!bg-[#00a896] hover:!bg-[#128C7E] !text-white w-full h-14 text-sm rounded-full"
                 }
                 `}
             >
