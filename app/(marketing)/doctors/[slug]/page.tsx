@@ -3,35 +3,34 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import {
-    Stethoscope, Clock, CalendarCheck, GraduationCap,
+    Stethoscope, Clock, GraduationCap,
     Award, CheckCircle2, ArrowLeft, Phone, Mail
 } from "lucide-react";
+// ✅ IMPORT THE NEW MODAL COMPONENT
+import DoctorBookingModal from "@/components/DoctorBookingModal";
 
-// --- FULL DOCTOR DATABASE ---
 // --- FULL DOCTOR DATABASE ---
 const doctorsData = [
     {
         id: "dr-hemshanker-sharma",
-        name: "Dr. Hemshanker Sharma",
-        specialty: "Internal Medicine & Nephrology",
+        name: "Dr. Hem Shanker Sharma",
+        specialty: "Internal Medicine",
         qualification: "MBBS, MD, DNB, FICP, FIAMS, FICCMD, FIACM",
-        designation: "Senior Consultant",
+        designation: "Senior Consultant & Founder",
         experience: "30+ Years",
-        image: "/dr-sharma.jpg", // ✅ Correct
+        image: "/dr-sharma.jpg",
         imagePosition: "object-top",
-        about: "Dr. Hemshankar Sharma is a veteran physician with exceptional credentials in internal\n" +
-            "medicine and nephrology. As a Gold Medalist and Fellow of four prestigious medical\n" +
-            "colleges, Dr. Sharma represents the pinnacle of medical expertise and academic\n" +
-            "achievement.",
+        phone: "7739142568",
+        about: "Dr. Hem Shanker Sharma is a visionary in the field of Internal Medicine with over three decades of clinical excellence. A Gold Medalist and Fellow of four prestigious medical colleges, Dr. Sharma represents the pinnacle of medical expertise in the region. He is not just a Senior Consultant but a mentor to a generation of doctors in Bhagalpur. His approach combines deep clinical acumen with compassionate care, specializing in complex multi-system diseases. He brings a gold-standard approach to diagnosing and treating chronic ailments, critical care cases, diabetes management, and geriatric health issues, serving as the foundational pillar of Aashray Hospital.",
         expertise: [
             "Comprehensive Internal Medicine",
-            "Kidney Disease Management (Nephrology)",
-            "Diabetes & Hypertension Management",
-            "Critical Care Medicine",
+            "Advanced Diabetes & Hypertension",
+            "Critical Care & Multi-organ Support",
             "Geriatric (Elderly) Care",
-            "Preventive Healthcare"
+            "Infectious Disease Management",
+            "Preventive Healthcare Strategies"
         ],
-        availability: "Mon - Sat (By Appointment)",
+        availability: "Mon - Sat",
     },
     {
         id: "dr-himadri-shankar",
@@ -40,18 +39,19 @@ const doctorsData = [
         qualification: "MBBS, MD, DNB (Nephrology) - Gold Medalist",
         designation: "Head of Nephrology (JLNMCH)",
         experience: "12+ Years",
-        image: "/pro-5.jpg", // ✅ Ensure this file exists in /public
+        image: "/pro-5.jpg",
         imagePosition: "object-top",
-        about: "Dr. Himadri Shankar is a distinguished nephrologist...",
+        phone: "6207833133",
+        about: "Dr. Himadri Shankar is a leading Nephrologist and Renal Transplant Physician, bringing Gold Medalist expertise to kidney care in Bihar. He specializes in the comprehensive management of Chronic Kidney Disease (CKD), resistant hypertension, and electrolyte imbalances. His proficiency extends to critical renal replacement therapies, including Hemodialysis and Peritoneal Dialysis. Only Center in Bhagalpur with HDF (Hemodiafiltration) machine. First Center to do Plasmapheresis in Bhagalpur. More than 50000 Hemodialysis done till date over 4 years.",
         expertise: [
-            "Chronic Kidney Disease (CKD) Management",
+            "Chronic Kidney Disease (CKD)",
             "Hemodialysis & Peritoneal Dialysis",
             "Renal Transplant Medicine",
-            "Acute Kidney Injury Treatment",
+            "Acute Kidney Injury (AKI)",
             "Glomerular Diseases",
-            "Hypertension & Electrolyte Disorders"
+            "Diabetic Nephropathy"
         ],
-        availability: "Mon - Sat (10:00 AM - 4:00 PM)",
+        availability: "Mon - Sat",
     },
     {
         id: "dr-sumit-shanker",
@@ -59,16 +59,17 @@ const doctorsData = [
         specialty: "Interventional Cardiologist",
         qualification: "MBBS, MD (Medicine), DM (Cardiology)",
         designation: "Head of Cardiology (JLNMCH)",
-        experience: "10+ Years",
-        image: "/pro-3.jpg", // ✅ Ensure this file exists in /public
+        experience: "12+ Years",
+        image: "/pro-3.jpg",
         imagePosition: "object-top",
-        about: "Dr. Sumit Shanker is a highly skilled interventional cardiologist...",
+        phone: "8809549337",
+        about: "Dr. Sumit Shanker is a dynamic Interventional Cardiologist dedicated to advanced cardiac care. With a DM in Cardiology and extensive experience in high-volume cardiac centers, he specializes in invasive procedures such as Coronary Angiography and Angioplasty (PTCA). His expertise covers the full spectrum of heart health, from managing acute heart attacks (Myocardial Infarction) and heart failure to complex arrhythmia management and pacemaker implantation.\n\nHe is the first Cardiologist to perform the following procedures in East Bihar:\n• CRT Device Placement\n• Conduction System Pacing\n• CTO Angioplasty\n• Bifurcation Angioplasty\n• BMU",
         expertise: [
             "Coronary Angiography & Angioplasty",
-            "Stent Placement",
-            "Heart Attack Management",
+            "Pacemaker Implantation",
+            "Acute Heart Attack Management",
             "Heart Failure Treatment",
-            "Arrhythmia Management",
+            "Echocardiography (2D/Doppler)",
             "Preventive Cardiology"
         ],
         availability: "24/7 Emergency & OP",
@@ -79,19 +80,20 @@ const doctorsData = [
         specialty: "Fetal Medicine Specialist",
         qualification: "MBBS, DGO, Fellowship in Fetal Medicine (Apollo & AIIMS)",
         designation: "Consultant Fetal Medicine",
-        experience: "8+ Years",
-        image: "/dr-amrita.jpg", // ✅ FIXED: Was /dr-amrita.jpg
+        experience: "12+ Years",
+        image: "/dr-amrita.jpg",
         imagePosition: "object-top",
-        about: "Dr. Setu Chhabra is a dedicated specialist...",
+        phone: "8800624989",
+        about: "Dr. Setu Chhabra is a highly specialized Fetal Medicine Consultant, trained at premier institutes like Apollo and AIIMS. Her practice focuses on the delicate and critical aspects of high-risk pregnancies and unborn fetal health. She utilizes advanced ultrasound technologies for the prenatal diagnosis of congenital abnormalities and genetic screening. Her compassionate approach empowers expectant mothers with detailed counseling and management strategies for complex conditions like twin pregnancies, fetal growth restriction, and maternal medical disorders, ensuring the safest possible outcome for mother and child.",
         expertise: [
             "High-Risk Pregnancy Management",
-            "Advanced Fetal Ultrasound & Imaging",
-            "Prenatal Diagnosis of Abnormalities",
+            "Level II/Targeted Fetal Scans",
+            "Prenatal Genetic Screening",
             "Twin & Multiple Pregnancy Care",
-            "Genetic Counseling",
+            "Fetal Growth Monitoring",
             "Maternal-Fetal Medicine"
         ],
-        availability: "Tue, Thu, Sat (11:00 AM - 2:00 PM)",
+        availability: "Mon - Sat",
     },
     {
         id: "dr-amrita-pritam",
@@ -99,19 +101,20 @@ const doctorsData = [
         specialty: "Dental Surgeon & Oral Implantologist",
         qualification: "BDS, MDS, FMC (Medical Cosmetology)",
         designation: "Maxillofacial Prosthodontist",
-        experience: "8+ Years",
-        image: "/dr-setu.jpg", // ✅ FIXED: Was /dr-setu.jpg
+        experience: "12+ Years",
+        image: "/dr-setu.jpg",
         imagePosition: "object-top",
-        about: "Dr. Amrita Pritam is an accomplished dental surgeon...",
+        phone: "7070219111",
+        about: "Dr. Amrita Pritam is an accomplished specialist in Maxillofacial Prosthodontics and Oral Implantology, blending dental science with aesthetic precision. She focuses on full-mouth rehabilitation, restoring both function and aesthetics for her patients. Her expertise ranges from advanced dental implants and crown/bridge work to smile design and medical cosmetology. Dr. Pritam is dedicated to providing pain-free dental care and customized prosthetic solutions for patients requiring facial or oral reconstruction, ensuring every patient leaves with a confident, healthy smile.",
         expertise: [
-            "Dental Implants",
-            "Smile Makeovers & Cosmetic Dentistry",
+            "Advanced Dental Implants",
+            "Smile Makeovers & Veneers",
             "Complete & Partial Dentures",
             "Maxillofacial Prosthetics",
             "Full Mouth Rehabilitation",
-            "Crown & Bridge Work"
+            "Root Canal Treatment"
         ],
-        availability: "Mon - Sat (2:00 PM - 8:00 PM)",
+        availability: "Mon - Sat",
     },
 ];
 
@@ -130,7 +133,6 @@ export default async function DoctorProfilePage({ params }: { params: Promise<{ 
     }
 
     return (
-        // ✅ PALETTE: Light Background, Dark Blue Text
         <main className="min-h-screen bg-[#fbfdf7] text-[#05668d] font-sans selection:bg-[#02c39a] selection:text-white">
             <div className="container mx-auto px-6 pt-8">
                 <Link href="/doctors" className="inline-flex items-center text-[#028090] hover:text-[#00a896] transition-colors text-sm font-bold uppercase tracking-widest">
@@ -166,9 +168,12 @@ export default async function DoctorProfilePage({ params }: { params: Promise<{ 
                                         <p className="font-bold text-sm text-[#05668d]">{doctor.availability}</p>
                                     </div>
                                 </div>
-                                <Button className="w-full h-14 rounded-full bg-[#00a896] text-white hover:bg-[#028090] font-bold uppercase tracking-wider text-sm shadow-lg hover:shadow-xl transition-all">
-                                    <CalendarCheck className="mr-2 h-4 w-4" /> Book Appointment
-                                </Button>
+
+                                {/* ✅ REPLACED LINK WITH MODAL COMPONENT */}
+                                <DoctorBookingModal
+                                    doctorName={doctor.name}
+                                    doctorPhone={doctor.phone}
+                                />
                             </div>
                         </div>
 
@@ -193,7 +198,7 @@ export default async function DoctorProfilePage({ params }: { params: Promise<{ 
                                 <h2 className="text-2xl font-bold uppercase tracking-tight mb-4 flex items-center text-[#05668d]">
                                     <Award className="mr-3 h-6 w-6 text-[#00a896]" /> About
                                 </h2>
-                                <p className="text-[#05668d]/80 leading-relaxed text-lg border-l border-[#00a896]/10 pl-6">
+                                <p className="text-[#05668d]/80 leading-relaxed text-lg border-l border-[#00a896]/10 pl-6 text-justify whitespace-pre-line">
                                     {doctor.about}
                                 </p>
                             </div>
@@ -204,8 +209,8 @@ export default async function DoctorProfilePage({ params }: { params: Promise<{ 
                                 </h2>
                                 <div className="grid md:grid-cols-2 gap-4">
                                     {doctor.expertise.map((item, idx) => (
-                                        <div key={idx} className="flex items-center p-4 bg-white border border-[#00a896]/10 hover:border-[#00a896] transition-colors rounded-lg shadow-sm">
-                                            <CheckCircle2 className="h-5 w-5 text-[#00a896] mr-3 shrink-0" />
+                                        <div key={idx} className="flex items-center p-4 bg-white border border-[#00a896]/10 hover:border-[#00a896] transition-colors rounded-lg shadow-sm group">
+                                            <CheckCircle2 className="h-5 w-5 text-[#00a896] mr-3 shrink-0 group-hover:scale-110 transition-transform" />
                                             <span className="font-medium text-[#05668d] text-sm">{item}</span>
                                         </div>
                                     ))}
@@ -217,14 +222,14 @@ export default async function DoctorProfilePage({ params }: { params: Promise<{ 
                 </div>
             </section>
 
-            {/* --- CTA SECTION (Dark Blue like Footer) --- */}
+            {/* --- CTA SECTION --- */}
             <section className="py-20 px-6 border-t border-[#028090]/30 bg-[#05668d] text-center mt-12">
                 <h2 className="text-3xl font-extrabold uppercase tracking-tight mb-6 text-white">
                     Need Expert Medical Advice?
                 </h2>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Button size="lg" className="rounded-full bg-[#02c39a] text-white hover:bg-[#00a896] font-bold uppercase px-10 h-14 shadow-lg">
-                        <Phone className="mr-2 h-4 w-4" /> Call +91 12345 67890
+                        <Phone className="mr-2 h-4 w-4" /> Call +91 77391 42568
                     </Button>
                     <Link href="/contact">
                         <Button size="lg" variant="outline" className="rounded-full border-white/20 text-white hover:bg-white hover:text-[#05668d] font-bold uppercase px-10 h-14">

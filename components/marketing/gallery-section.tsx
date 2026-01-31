@@ -10,13 +10,14 @@ import {
 } from "@/components/ui/carousel";
 
 const galleryImages = [
-    { src: "/pic2.jpg", alt: "Advanced OT", caption: "Dr. Sumit Shanker" },
-    { src: "/pic3.jpg", alt: "Pharmacy", caption: "Dr. Himadri Shankar" },
-    { src: "/op.JPG", alt: "CATH LAB", caption: "State-of-the-art CATH LAB" },
-    { src: "/CT.jpg", alt: "CT Scan", caption: "Ultrasound Scanner" },
-    { src: "/ICU.jpg", alt: "ICU", caption: "Dialysis Unit" },
-    { src: "/PW.jpg", alt: "Ward", caption: "Specialized team" },
+    { src: "/gallery-1.jpg", alt: "Advanced OT", caption: "Aashray" },
     { src: "/pic1.jpg", alt: "ICU Unit", caption: "ICU Unit" },
+    { src: "/ICU.jpg", alt: "ICU", caption: "Dialysis Unit" },
+    { src: "/op.JPG", alt: "CATH LAB", caption: "State-of-the-art CATH LAB" },
+    { src: "/gallery-2.jpg", alt: "Pharmacy", caption: "Dental Care" },
+    { src: "/CT.jpg", alt: "CT Scan", caption: "Ultrasound Scanner" },
+
+
 ];
 
 export function GallerySection() {

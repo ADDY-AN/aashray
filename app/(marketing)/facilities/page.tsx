@@ -9,11 +9,11 @@ import {
 // Facility Data
 const facilities = [
     {
-        title: "Advanced Cath Lab",
-        description: "Our state-of-the-art Catheterization Lab is equipped for life-saving interventional cardiac procedures. We perform coronary angiography, angioplasty, and stent placements with precision technology to minimize recovery time.",
-        features: ["Coronary Angiography", "Primary Angioplasty (PAMI)", "Pacemaker Implantation"],
-        icon: HeartPulse,
-        image: "/cath-lab.jpg",
+        title: "24/7 Critical Care (ICU)",
+        description: "Our Intensive Care Unit is staffed round-the-clock by critical care specialists. We handle complex medical emergencies, cardiac arrests, and post-operative recovery with advanced monitoring systems.",
+        features: ["Ventilator Support", "Multipara Monitors", "Central Oxygen Supply"],
+        icon: Clock,
+        image: "/ICU-2.jpg",
     },
     {
         title: "Dialysis Unit",
@@ -23,11 +23,11 @@ const facilities = [
         image: "/ICU.jpg",
     },
     {
-        title: "Fetal Medicine Centre",
-        description: "Specialized prenatal care utilizing high-resolution ultrasound technology. We provide early diagnosis of fetal abnormalities, genetic counseling, and management of high-risk pregnancies to ensure the safety of mother and child.",
-        features: ["Level III Ultrasound", "Genetic Counseling", "Fetal Doppler"],
-        icon: Baby,
-        image: "/fetal.jpg",
+        title: "Advanced Cath Lab",
+        description: "Our state-of-the-art Catheterization Lab is equipped for life-saving interventional cardiac procedures. We perform coronary angiography, angioplasty, and stent placements with precision technology to minimize recovery time.",
+        features: ["Coronary Angiography", "Primary Angioplasty (PAMI)", "Pacemaker Implantation"],
+        icon: HeartPulse,
+        image: "/cath-lab.jpg",
     },
     {
         title: "Dental & Implant Studio",
@@ -37,19 +37,14 @@ const facilities = [
         image: "/dental.jpg",
     },
     {
-        title: "Modular Operation Theatre",
-        description: "Our OT complex is designed with laminar airflow and HEPA filters to maintain absolute sterility. It is fully equipped for complex general surgeries, trauma cases, and specialized cardiac interventions.",
-        features: ["Infection Control System", "Advanced Anesthesia Workstation", "C-Arm Imaging"],
-        icon: Stethoscope,
-        image: "/ope.jpg",
+        title: "Fetal Medicine Centre",
+        description: "Specialized prenatal care utilizing high-resolution ultrasound technology. We provide early diagnosis of fetal abnormalities, genetic counseling, and management of high-risk pregnancies to ensure the safety of mother and child.",
+        features: ["Level III Ultrasound", "Genetic Counseling", "Fetal Doppler"],
+        icon: Baby,
+        image: "/fetal.jpg",
     },
-    {
-        title: "24/7 Critical Care (ICU)",
-        description: "Our Intensive Care Unit is staffed round-the-clock by critical care specialists. We handle complex medical emergencies, cardiac arrests, and post-operative recovery with advanced monitoring systems.",
-        features: ["Ventilator Support", "Multipara Monitors", "Central Oxygen Supply"],
-        icon: Clock,
-        image: "/ICU-2.jpg",
-    }
+
+
 ];
 
 export default function FacilitiesPage() {

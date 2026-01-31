@@ -22,18 +22,16 @@ export function Navbar() {
         <header className="sticky top-0 z-50 w-full border-b border-[#00a896]/10 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/90 shadow-sm">
             <div className="container mx-auto flex h-24 items-center justify-between px-6">
 
-                {/* --- LOGO AREA (Updated) --- */}
+                {/* --- LOGO AREA --- */}
                 <Link href="/" className="flex items-center gap-3 group">
                     <Image
                         src="/logo.svg"
                         alt="Aashray Hospital"
                         width={60}
                         height={60}
-                        className="h-14 w-auto object-contain" // Slightly adjusted size for balance
+                        className="h-14 w-auto object-contain"
                         priority
                     />
-
-                    {/* ✅ ADDED: Name Text Block */}
                     <div className="flex flex-col">
                         <h1 className="text-2xl font-extrabold text-[#05668d] uppercase tracking-tighter leading-none group-hover:text-[#00a896] transition-colors">
                             Aashray
@@ -57,19 +55,22 @@ export function Navbar() {
                     ))}
                 </nav>
 
-                {/* --- CTA AREA --- */}
+                {/* --- CTA AREA (Desktop) --- */}
                 <div className="hidden md:flex items-center gap-6">
                     {/* Phone Section */}
                     <div className="hidden lg:flex items-center gap-2 text-[#05668d] text-sm font-bold tracking-wide group cursor-pointer">
                         <div className="p-1.5 rounded-full bg-[#00a896]/10 text-[#00a896] group-hover:bg-[#00a896] group-hover:text-white transition-colors">
                             <Phone className="h-4 w-4" />
                         </div>
-                        <span className="group-hover:text-[#00a896] transition-colors">+91 12345 67890</span>
+                        <span className="group-hover:text-[#00a896] transition-colors">+91 77391 42568</span>
                     </div>
 
-                    <Button className="rounded-full bg-[#00a896] text-white hover:bg-[#028090] font-bold uppercase tracking-wider text-xs px-6 h-10 transition-all shadow-md hover:translate-y-[-1px] hover:shadow-lg">
-                        Book Appointment
-                    </Button>
+                    {/* ✅ FIXED: Wrapped Button in Link */}
+                    <Link href="/contact">
+                        <Button className="rounded-full bg-[#00a896] text-white hover:bg-[#028090] font-bold uppercase tracking-wider text-xs px-6 h-10 transition-all shadow-md hover:translate-y-[-1px] hover:shadow-lg">
+                            Book Appointment
+                        </Button>
+                    </Link>
                 </div>
 
                 {/* --- MOBILE MENU TOGGLE --- */}
@@ -98,11 +99,15 @@ export function Navbar() {
                         <div className="h-px w-full bg-[#00a896]/10 my-2"></div>
                         <div className="flex flex-col gap-4">
                             <div className="flex items-center gap-3 text-[#00a896] font-bold">
-                                <Phone className="h-5 w-5" /> +91 12345 67890
+                                <Phone className="h-5 w-5" /> +91 77391 42568
                             </div>
-                            <Button className="w-full rounded-full bg-[#00a896] text-white hover:bg-[#028090] font-bold uppercase h-12 shadow-md">
-                                Book Appointment
-                            </Button>
+
+                            {/* Mobile Button Link */}
+                            <Link href="/contact" onClick={() => setIsOpen(false)}>
+                                <Button className="w-full rounded-full bg-[#00a896] text-white hover:bg-[#028090] font-bold uppercase h-12 px-8 shadow-md">
+                                    Book Appointment
+                                </Button>
+                            </Link>
                         </div>
                     </nav>
                 </div>

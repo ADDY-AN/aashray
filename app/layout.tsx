@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { cn } from "@/lib/utils"; // Required for Shadcn style merging
 import "./globals.css";
+import { Toaster } from "sonner"; // ✅ Import Toaster
 
 const geistSans = Geist({
     variable: "--font-sans",
@@ -19,7 +20,6 @@ export const metadata: Metadata = {
         default: "Aashray Superspeciality Hospital",
         template: "%s | Aashray Hospital",
     },
-    // Removed the citation marker for cleaner SEO
     description: "We deliver professional, world-class heart treatments and superspeciality care at affordable prices.",
     keywords: ["Hospital", "Cardiology", "Nephrology", "Dialysis", "Muzaffarpur", "Aashray"],
 };
@@ -38,7 +38,11 @@ export default function RootLayout({
                 geistMono.variable
             )}
         >
+        {/* 1. The Main App Content */}
         {children}
+
+        {/* 2. The Toast Notification System (Required for Sonner) */}
+        <Toaster position="top-center" richColors />
         </body>
         </html>
     );

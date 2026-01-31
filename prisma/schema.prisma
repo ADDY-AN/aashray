@@ -1,18 +1,24 @@
+// 1. Define the Client Generator
 generator client {
   provider = "prisma-client-js"
 }
 
+// 2. Define the Datasource (MongoDB)
 datasource db {
   provider = "mongodb"
-  url      = env("DATABASE_URL")  // ✅ Keep exactly this text. Do not paste the link here.
+  url      = env("DATABASE_URL")
 }
 
+// 3. Define the Appointment Model
 model Appointment {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
   name      String
+  age       String
   phone     String
   email     String
   date      String
   reason    String
+  doctor    String
   createdAt DateTime @default(now())
 }
+

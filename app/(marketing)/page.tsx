@@ -11,7 +11,7 @@ export default function Home() {
         <main className="flex min-h-screen flex-col bg-[#fbfdf7] text-[#05668d] font-sans selection:bg-[#02c39a] selection:text-white">
 
             {/* --- HERO SECTION --- */}
-            <section className="relative w-full overflow-hidden bg-[#fbfdf7] pb-16 pt-28 md:pt-40">
+            <section className="relative w-full overflow-hidden bg-[#fbfdf7] pb-16 pt-28 md:pt-30">
 
                 {/* Background Pattern */}
                 <div className="absolute inset-0 bg-[radial-gradient(#00a896_1px,transparent_1px)] [background-size:16px_16px] opacity-10 pointer-events-none"></div>
@@ -62,7 +62,7 @@ export default function Home() {
                                 <div className="p-2 bg-[#f0f3bd] rounded-full animate-pulse">
                                     <Phone className="h-4 w-4 text-[#05668d]" />
                                 </div>
-                                <span>24/7 Emergency: <span className="text-[#05668d]">123-456-7890</span></span>
+                                <span>24/7 Emergency: <span className="text-[#05668d]">77391 42568</span></span>
                             </div>
                         </div>
 
@@ -81,7 +81,7 @@ export default function Home() {
             {/* --- CARDS SECTION --- */}
             <section className="py-20 px-6 bg-white">
                 <div className="container mx-auto">
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
                         {/* Card 1 */}
                         <div className="bg-[#f0f3bd]/20 p-8 rounded-2xl border border-[#f0f3bd] hover:shadow-xl transition-all group cursor-pointer hover:border-[#00a896] hover:-translate-y-1">
@@ -107,35 +107,21 @@ export default function Home() {
                             </div>
                             <p className="text-[#05668d]/80 text-sm mb-4 font-medium">Advanced tech under one roof.</p>
                             <Link href="/facilities" className="inline-flex items-center text-sm font-bold text-[#05668d] hover:text-[#00a896] transition-colors">
-                                View Locations <ArrowRight className="ml-2 h-4 w-4" />
+                                View More <ArrowRight className="ml-2 h-4 w-4" />
                             </Link>
                         </div>
 
                         {/* Card 3 */}
                         <div className="bg-[#028090]/10 p-8 rounded-2xl border border-[#028090]/30 hover:shadow-xl transition-all group cursor-pointer hover:border-[#00a896] hover:-translate-y-1">
                             <div className="flex justify-between items-start mb-6">
-                                <h3 className="text-xl font-bold text-[#05668d]">Our <br/>Specialities</h3>
+                                <h3 className="text-xl font-bold text-[#05668d]">Our <br/>Specialists</h3>
                                 <div className="bg-white p-3 rounded-full shadow-sm group-hover:scale-110 transition-transform">
                                     <Stethoscope className="h-6 w-6 text-[#05668d]" />
                                 </div>
                             </div>
                             <p className="text-[#05668d]/80 text-sm mb-4 font-medium">Expertise in complex care.</p>
-                            <Link href="/departments" className="inline-flex items-center text-sm font-bold text-[#05668d] hover:text-[#00a896] transition-colors">
-                                Explore <ArrowRight className="ml-2 h-4 w-4" />
-                            </Link>
-                        </div>
-
-                        {/* Card 4 */}
-                        <div className="bg-[#f0f3bd]/40 p-8 rounded-2xl border border-[#f0f3bd] hover:shadow-xl transition-all group cursor-pointer hover:border-[#00a896] hover:-translate-y-1">
-                            <div className="flex justify-between items-start mb-6">
-                                <h3 className="text-xl font-bold text-[#05668d]">Find a <br/>Doctor</h3>
-                                <div className="bg-white p-3 rounded-full shadow-sm group-hover:scale-110 transition-transform">
-                                    <User className="h-6 w-6 text-[#028090]" />
-                                </div>
-                            </div>
-                            <p className="text-[#05668d]/80 text-sm mb-4 font-medium">Top experts for your health.</p>
                             <Link href="/doctors" className="inline-flex items-center text-sm font-bold text-[#05668d] hover:text-[#00a896] transition-colors">
-                                Search Team <ArrowRight className="ml-2 h-4 w-4" />
+                                Explore <ArrowRight className="ml-2 h-4 w-4" />
                             </Link>
                         </div>
 
@@ -185,18 +171,15 @@ export default function Home() {
                 <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-8">
                     Ready to Prioritize Your Health?
                 </h2>
-                <Button size="lg" className="rounded-full bg-[#02c39a] hover:bg-[#00a896] text-white font-bold text-lg px-12 h-16 shadow-2xl transition-all hover:scale-105">
-                    Contact Us Today
-                </Button>
+                <Link href="/contact">
+                    <Button size="lg" className="rounded-full bg-[#02c39a] hover:bg-[#00a896] text-white font-bold text-lg px-12 h-16 shadow-2xl transition-all hover:scale-105">
+                        Contact Us Today
+                    </Button>
+                </Link>
             </section>
 
             {/* --- FLOATING CHAT BUTTON --- */}
-            <div className="fixed bottom-6 right-6 z-50">
-                <button className="bg-[#00a896] hover:bg-[#028090] text-white p-4 rounded-full shadow-lg transition-all hover:scale-110">
-                    <span className="sr-only">Chat</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-                </button>
-            </div>
+
 
         </main>
     );

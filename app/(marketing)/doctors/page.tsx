@@ -3,20 +3,24 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { Clock, ArrowUpRight, CalendarCheck, Award, GraduationCap, ShieldCheck } from "lucide-react";
+import { Clock, ArrowUpRight, GraduationCap, Award, ShieldCheck } from "lucide-react";
+// ✅ Import the Modal
+import DoctorBookingModal from "@/components/DoctorBookingModal";
 
-// ✅ REAL DOCTOR DATA
+// ✅ REAL DOCTOR DATA WITH PHONE NUMBERS
 const doctors = [
     {
         id: "dr-hemshanker-sharma",
-        name: "Dr. Hemshanker Sharma",
-        specialty: "Internal Medicine & Nephrology",
+        name: "Dr. Hem Shanker Sharma",
+        specialty: "Internal Medicine",
         qualification: "MBBS, MD, DNB, FICP, FIAMS",
         details: "Gold Medalist | Fellow of Indian College of Physicians",
         experience: "30+ Years",
         image: "/dr-sharma.jpg",
         availability: "Mon - Sun",
         imagePosition: "object-top",
+        // Fallback to Hospital Number
+        phone: "7739142568"
     },
     {
         id: "dr-himadri-shankar",
@@ -28,6 +32,8 @@ const doctors = [
         image: "/pro-5.jpg",
         availability: "Mon - Sun",
         imagePosition: "object-top",
+        // ✅ Specific Number
+        phone: "6207833133"
     },
     {
         id: "dr-sumit-shanker",
@@ -35,21 +41,12 @@ const doctors = [
         specialty: "Interventional Cardiologist",
         qualification: "MBBS, MD, DM (Cardiology)",
         details: "Head of Cardiology (JLNMCH) | Angioplasty Expert",
-        experience: "10+ Years",
+        experience: "12+ Years",
         image: "/pro-3.jpg",
         availability: "Mon - Sun",
         imagePosition: "object-top",
-    },
-    {
-        id: "dr-setu-chhabra",
-        name: "Dr. Setu Chhabra",
-        specialty: "Fetal Medicine Specialist",
-        qualification: "MBBS, DGO, Fellowship (Apollo & AIIMS)",
-        details: "High-Risk Pregnancy | Advanced Fetal Ultrasound",
-        experience: "8+ Years",
-        image: "/dr-amrita.jpg",
-        availability: "Mon - Sun",
-        imagePosition: "object-top",
+        // ✅ Specific Number
+        phone: "8809549337"
     },
     {
         id: "dr-amrita-pritam",
@@ -57,10 +54,25 @@ const doctors = [
         specialty: "Dental Surgeon & Implantologist",
         qualification: "BDS, MDS, FMC (Medical Cosmetology)",
         details: "Prosthodontics | Maxillofacial Prosthetics",
-        experience: "8+ Years",
+        experience: "12+ Years",
         image: "/dr-setu.jpg",
         availability: "Mon - Sun",
         imagePosition: "object-top",
+        // ✅ Specific Number
+        phone: "7070219111"
+    },
+    {
+        id: "dr-setu-chhabra",
+        name: "Dr. Setu Chhabra",
+        specialty: "Fetal Medicine Specialist",
+        qualification: "MBBS, DGO, Fellowship (Apollo & AIIMS)",
+        details: "High-Risk Pregnancy | Advanced Fetal Ultrasound",
+        experience: "12+ Years",
+        image: "/dr-amrita.jpg",
+        availability: "Mon - Sun",
+        imagePosition: "object-top",
+        // ✅ Specific Number
+        phone: "8800624989"
     },
 ];
 
@@ -68,7 +80,6 @@ export default function DoctorsPage() {
     const router = useRouter();
 
     return (
-        // ✅ PALETTE: Light Background, Dark Blue Text
         <main className="flex min-h-screen flex-col bg-[#fbfdf7] text-[#05668d] font-sans selection:bg-[#02c39a] selection:text-white">
 
             {/* --- HERO HEADER --- */}
@@ -83,7 +94,7 @@ export default function DoctorsPage() {
                         Meet Our <span className="text-[#00a896]">Specialists</span>
                     </h1>
                     <p className="max-w-3xl mx-auto text-[#028090] text-lg">
-                        A multidisciplinary team of Gold Medalists and Fellowship-trained experts from India's premier institutions like AIIMS, Apollo, and JLNMCH.
+                        A multidisciplinary team of Gold Medalists and Fellowship-trained experts from India&apos;s premier institutions like AIIMS, Apollo, and JLNMCH.
                     </p>
                 </div>
             </section>
@@ -97,7 +108,6 @@ export default function DoctorsPage() {
                             <div
                                 key={index}
                                 onClick={() => router.push(`/doctors/${doc.id}`)}
-                                // ✅ CARD: White bg, Persian Green border interaction
                                 className="group relative bg-white border border-[#00a896]/20 hover:border-[#00a896] transition-all duration-300 flex flex-col overflow-hidden cursor-pointer shadow-sm hover:shadow-xl rounded-xl hover:-translate-y-1"
                             >
                                 {/* Image Area */}
@@ -109,12 +119,10 @@ export default function DoctorsPage() {
                                         className={`object-cover transition-transform duration-500 group-hover:scale-105 ${doc.imagePosition}`}
                                     />
 
-                                    {/* Badge: Persian Green */}
                                     <div className="absolute bottom-4 left-4 bg-[#00a896] text-white px-3 py-1 text-xs font-bold uppercase tracking-wider rounded-md shadow-md">
                                         {doc.specialty}
                                     </div>
 
-                                    {/* Overlay Icon */}
                                     <div className="absolute top-4 right-4 bg-white/90 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-lg">
                                         <ArrowUpRight className="h-5 w-5 text-[#00a896]" />
                                     </div>
@@ -126,19 +134,16 @@ export default function DoctorsPage() {
                                         {doc.name}
                                     </h3>
 
-                                    {/* Qualifications */}
                                     <div className="flex items-start mt-3 mb-4 text-sm text-[#028090]">
                                         <GraduationCap className="h-4 w-4 text-[#00a896] mr-2 mt-0.5 shrink-0" />
                                         <span className="uppercase tracking-wide font-medium">{doc.qualification}</span>
                                     </div>
 
-                                    {/* Key Achievements */}
                                     <div className="mb-6 pl-6 text-xs text-[#05668d]/70 font-semibold uppercase tracking-wider border-l-2 border-[#00a896]/30">
                                         {doc.details}
                                     </div>
 
                                     <div className="mt-auto space-y-4">
-                                        {/* Details List */}
                                         <div className="flex items-center text-sm text-[#028090] border-t border-[#00a896]/10 pt-4">
                                             <Award className="h-4 w-4 text-[#00a896] mr-3" />
                                             <span>Exp: {doc.experience}</span>
@@ -149,20 +154,19 @@ export default function DoctorsPage() {
                                         </div>
 
                                         {/* Action Buttons */}
-                                        <div className="pt-6 grid grid-cols-2 gap-3">
+                                        <div className="pt-6 grid grid-cols-2 gap-3 items-center">
                                             <div className="flex items-center justify-center text-xs font-bold uppercase tracking-wider text-[#05668d] group-hover:text-[#00a896] transition-colors">
                                                 View Profile <ArrowUpRight className="ml-1 h-3 w-3" />
                                             </div>
 
-                                            <Button
-                                                className="rounded-full bg-[#00a896] text-white border border-transparent hover:bg-[#028090] font-bold uppercase tracking-wider text-xs h-10 shadow-md"
-                                                onClick={(e) => {
-                                                    e.stopPropagation();
-                                                    router.push("/contact");
-                                                }}
-                                            >
-                                                <CalendarCheck className="mr-2 h-3 w-3" /> Appointment
-                                            </Button>
+                                            {/* ✅ WRAPPED IN DIV TO STOP PROPAGATION */}
+                                            {/* This prevents the card click (router.push) from firing when clicking the button */}
+                                            <div onClick={(e) => e.stopPropagation()}>
+                                                <DoctorBookingModal
+                                                    doctorName={doc.name}
+                                                    doctorPhone={doc.phone}
+                                                />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
