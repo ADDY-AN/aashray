@@ -27,7 +27,7 @@ const facilities = [
         description: "Our state-of-the-art Catheterization Lab is equipped for life-saving interventional cardiac procedures. We perform coronary angiography, angioplasty, and stent placements with precision technology to minimize recovery time.",
         features: ["Coronary Angiography", "Primary Angioplasty (PAMI)", "Pacemaker Implantation"],
         icon: HeartPulse,
-        image: "/cath-lab.jpg",
+        image: "/cath-lab.webp",
     },
     {
         title: "Dental & Implant Studio",
