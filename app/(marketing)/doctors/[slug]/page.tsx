@@ -63,7 +63,7 @@ const doctorsData = [
         image: "/pro-3.jpg",
         imagePosition: "object-top",
         phone: "8809549337",
-        about: "Dr. Sumit Shanker is a dynamic Interventional Cardiologist dedicated to advanced cardiac care. With a DM in Cardiology and extensive experience in high-volume cardiac centers, he specializes in invasive procedures such as Coronary Angiography and Angioplasty (PTCA). His expertise covers the full spectrum of heart health, from managing acute heart attacks (Myocardial Infarction) and heart failure to complex arrhythmia management and pacemaker implantation.\n\nHe is the first Cardiologist to perform the following procedures in East Bihar:\n• CRT Device Placement\n• Conduction System Pacing\n• CTO Angioplasty\n• Bifurcation Angioplasty\n• BMU",
+        about: "Dr. Sumit Shanker is a dynamic Interventional Cardiologist dedicated to advanced cardiac care. With a DM in Cardiology and extensive experience in high-volume cardiac centers, he specializes in invasive procedures such as Coronary Angiography and Angioplasty (PTCA). His expertise covers the full spectrum of heart health, from managing acute heart attacks (Myocardial Infarction) and heart failure to complex arrhythmia management and pacemaker implantation.\n\nHe is the first Cardiologist to perform the following procedures in East Bihar:\n• CRT Device Placement\n• More than 3000 successful cardiac procedures done till date\n• Conduction System Pacing\n• CTO Angioplasty\n• Bifurcation Angioplasty\n• BMU",
         expertise: [
             "Coronary Angiography & Angioplasty",
             "Pacemaker Implantation",
