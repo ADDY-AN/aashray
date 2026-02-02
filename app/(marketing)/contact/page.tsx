@@ -87,37 +87,40 @@ export default function ContactPage() {
                     <div className="inline-flex items-center gap-2 bg-[#f0f3bd]/30 border border-[#00a896]/20 text-[#028090] px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
                         <ShieldCheck className="h-4 w-4" /> 24/7 Patient Support
                     </div>
-                    <h1 className="text-5xl md:text-7xl font-extrabold uppercase tracking-tighter mb-4 text-[#05668d]">
+
+                    {/* ✅ FIXED: Adjusted text size for mobile (text-4xl instead of 5xl) */}
+                    <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold uppercase tracking-tighter mb-4 text-[#05668d]">
                         Get in <span className="text-[#00a896]">Touch</span>
                     </h1>
-                    <p className="max-w-2xl mx-auto text-[#028090] text-lg font-medium">
+
+                    <p className="max-w-2xl mx-auto text-[#028090] text-base md:text-lg font-medium px-2">
                         We are here to listen. Whether you have a question or need emergency assistance, our team is ready.
                     </p>
                 </div>
             </section>
 
             {/* --- MAIN CONTENT --- */}
-            <section className="py-16 px-6">
+            <section className="py-12 md:py-16 px-4 md:px-6">
                 <div className="container mx-auto grid lg:grid-cols-2 gap-12 lg:gap-20">
 
                     {/* --- LEFT COLUMN: INFO --- */}
                     <div className="space-y-10">
                         {/* Emergency Block */}
-                        <div className="bg-[#05668d] text-white p-8 rounded-2xl shadow-2xl relative overflow-hidden group">
+                        <div className="bg-[#05668d] text-white p-6 md:p-8 rounded-2xl shadow-2xl relative overflow-hidden group">
                             <div className="absolute top-0 right-0 w-32 h-32 bg-[#02c39a] rounded-full blur-[60px] opacity-20 group-hover:opacity-40 transition-opacity"></div>
 
-                            <h3 className="text-xl font-bold uppercase tracking-widest text-[#02c39a] mb-2">Emergency?</h3>
-                            <h2 className="text-3xl md:text-4xl font-extrabold mb-6 leading-tight">
+                            <h3 className="text-lg md:text-xl font-bold uppercase tracking-widest text-[#02c39a] mb-2">Emergency?</h3>
+                            <h2 className="text-2xl md:text-4xl font-extrabold mb-6 leading-tight">
                                 Immediate Assistance
                             </h2>
 
                             <a href="tel:+917739142568" className="flex items-center gap-4 bg-white/10 p-4 rounded-xl hover:bg-white/20 transition-all border border-white/10 cursor-pointer">
-                                <div className="bg-[#02c39a] p-3 rounded-full animate-pulse">
+                                <div className="bg-[#02c39a] p-3 rounded-full animate-pulse shrink-0">
                                     <Phone className="h-6 w-6 text-white" />
                                 </div>
                                 <div>
                                     <p className="text-xs text-[#f0f3bd] font-bold uppercase tracking-wider">Call Helpline Now</p>
-                                    <p className="text-2xl md:text-3xl font-black tracking-wide">+91 77391 42568</p>
+                                    <p className="text-xl md:text-3xl font-black tracking-wide">+91 77391 42568</p>
                                 </div>
                             </a>
                         </div>
@@ -135,19 +138,18 @@ export default function ContactPage() {
                             <div className="bg-white p-6 rounded-2xl border border-[#00a896]/10 shadow-sm hover:shadow-md transition-all">
                                 <Mail className="h-8 w-8 text-[#00a896] mb-4" />
                                 <h4 className="font-bold text-[#05668d] text-lg mb-2">Email Support</h4>
-                                <p className="text-[#028090] text-sm leading-relaxed">
+                                <p className="text-[#028090] text-sm leading-relaxed break-all">
                                     aashraynursing@gmail.com
-
                                 </p>
                             </div>
                         </div>
                     </div>
 
                     {/* --- RIGHT COLUMN: FORM --- */}
-                    <div className="bg-white p-8 md:p-10 rounded-3xl shadow-xl border border-[#00a896]/10 h-fit sticky top-24">
+                    <div className="bg-white p-6 md:p-10 rounded-3xl shadow-xl border border-[#00a896]/10 h-fit sticky top-24">
                         <div className="mb-8">
-                            <h2 className="text-3xl font-extrabold text-[#05668d] mb-2">Book an Appointment</h2>
-                            <p className="text-[#028090]">Fill the form below. Confirmation will be sent to your email.</p>
+                            <h2 className="text-2xl md:text-3xl font-extrabold text-[#05668d] mb-2">Book an Appointment</h2>
+                            <p className="text-[#028090] text-sm md:text-base">Fill the form below. Confirmation will be sent to your email.</p>
                         </div>
 
                         <form onSubmit={handleSubmit} className="space-y-5">
@@ -207,7 +209,7 @@ export default function ContactPage() {
                                 </div>
                             </div>
 
-                            {/* Row 3: Doctor Selection (UPDATED) */}
+                            {/* Row 3: Doctor Selection */}
                             <div className="space-y-1">
                                 <label className="text-sm font-bold text-[#05668d] uppercase ml-1">Select Department / Doctor</label>
                                 <div className="relative">
@@ -217,7 +219,6 @@ export default function ContactPage() {
                                         onChange={handleChange}
                                         className="w-full h-12 rounded-xl bg-[#fbfdf7] border border-[#00a896]/20 focus:border-[#00a896] text-[#05668d] px-3 appearance-none focus:ring-1 focus:ring-[#00a896] outline-none transition-all"
                                     >
-                                        {/* Keys must match DOCTOR_PHONES exactly */}
                                         <option value="General Inquiry">General Inquiry</option>
                                         <option value="Dr. Hem Shanker Sharma">Dr. Hem Shanker Sharma (Internal Medicine)</option>
                                         <option value="Dr. Himadri Shankar">Dr. Himadri Shankar (Nephrology)</option>
